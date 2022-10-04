@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+  box-sizing: border-box;
+  user-select: none;
+  
+}
+html,
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #333;
+  color: white;
+}
+
+header {
+  text-align: center;
+  padding: 1em;
+  background-color: hsl(0, 0%, 30%);;
+}
+
+p{
+  font-weight:bold;
+  font-size: 3rem;
+}
+
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.buttons > button {
+  background-color: hsl(0, 0%, 30%);
+  font-size: 5rem;
+  padding: 3rem;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.buttons > button:hover {
+    background-color: hsl(0, 0%, 40%);
+}
+
+.choices {
+  display: flex;
+  justify-content: center;
+  gap: 6rem;
+  margin: 5rem;
+  align-items: center;
+}
+
+.choices > .choice {
+  font-size: 5rem;
+}
+
+.scores {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.scores > .score {
+    font-weight: bold;
+  font-size: 2rem;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.wrapper > .final-message {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.modal {
+    position: fixed;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 2rem;
+    background-color: #333;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 500ms ease-in-out;
+  }
+
+  .modal.active {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  .overlay.active {
+    display: block;
+  }
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.7;
+  }
